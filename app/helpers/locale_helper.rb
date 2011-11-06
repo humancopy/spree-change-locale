@@ -12,8 +12,8 @@ module LocaleHelper
   # inspired by: https://github.com/greendog/spree_locales_dropdown
   def get_locales
      path = Rails.root.join('config', 'locales')
-     Dir.glob(Rails.root.join('config', 'locales', '*.yml')).collect { |filename| File.basename(filename.gsub(/\.yml$/, '')) }
-
+     items = Dir.glob(Rails.root.join('config', 'locales', '*.yml')).collect { |filename| File.basename(filename.gsub(/\.yml$/, '')) }
+     items unless items.blank?
      # Dir.glob(Rails.root.join('config', 'locales', '*.yml')).inject([]) do |mem, filename|
      #   locale_file = YAML.load_file(path.join(filename))
      #   str = File.basename(filename.gsub(/\.yml$/, ''))
