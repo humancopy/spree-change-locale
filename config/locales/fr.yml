@@ -1,0 +1,13 @@
+# French translations for spree-change-locale 
+# by humancopy (info@humancopy.net)
+# see: https://github.com/humancopy/spree-change-Locale/
+
+fr:
+  locale:
+    en: English
+    es: español
+    it: Italiano
+    jp: 日本語
+    de: Deutsch
+    fr: français
+    pt_BR: português brasileiro
