@@ -19,7 +19,8 @@ Examples:
 
 Look at [examples/_language_bar.html.erb](blob/master/examples/_language_bar.html.erb) for a simple use in views.
 
-You can setup *Spree::Config.get(:enabled_locales)* with an array of available locales. Otherwise only *I18n.locale* will be considered enabled.
+By default the extension will look at config/locales for enabled locales. If none found, it will fall to *I18n.locale*.
+You can setup *Spree::Config.get(:enabled_locales)* with an array of available locales to force a list of enabled locales.
 
 <!-- Testing
 -------
