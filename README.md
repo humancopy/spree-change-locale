@@ -24,7 +24,7 @@ Examples:
 * /fr/account => /account in French
 * /ru => / in Russian.
 
-Look at [examples/_language_bar.html.erb](blob/master/examples/_language_bar.html.erb) for a simple use in views.
+Look at [examples/_language_bar.html.erb](https://github.com/humancopy/spree-change-locale/blob/master/examples/_language_bar.html.erb) for a simple use in views.
 
 By default the extension will look at config/locales for enabled locales. If none found, it will fall to *I18n.default_locale*.
 You can setup *Spree::Config.get(:enabled_locales)* with an array of available locales to force a list of enabled locales.
