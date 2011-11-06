@@ -1,6 +1,6 @@
 module LocaleHelper
   def enabled_locales
-    @enabled_locales ||= (Spree::Config.get(:enabled_locales) || get_locales || I18n.default_locale).split('|').collect(&:intern)
+    @enabled_locales ||= (Spree::Config.get(:enabled_locales) || get_locales || I18n.available_locales || [I18n.default_locale]).collect(&:intern)
   end
   def link_to_locale(locale, name = nil)
     link_to name || locale_name(locale), "/#{locale}#{request.path}"

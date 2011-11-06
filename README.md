@@ -26,8 +26,9 @@ Examples:
 
 Look at [examples/_language_bar.html.erb](https://github.com/humancopy/spree-change-locale/blob/master/examples/_language_bar.html.erb) for a simple use in views.
 
-By default the extension will look at config/locales for enabled locales. If none found, it will fall to *I18n.default_locale*.
-You can setup *Spree::Config.get(:enabled_locales)* with an array of available locales to force a list of enabled locales.
+By default the extension will look at config/locales for enabled locales. If none found, it will fall to *I18n.available_locales* and then to single *I18n.default_locale*.
+
+You can setup *Spree::Config[:enabled_locales]* with an array of available locales to force a list of enabled locales. (e.g. ```Spree::Config.set(:enabled_locales, ['en','es','it'])```)
 
 <!-- ## Testing
 
