@@ -6,7 +6,9 @@ module LocaleHelper
     link_to name || locale_name(locale), "/#{locale}#{request.path}"
   end
   def locale_name(locale)
-    t("locale.#{locale.to_s.sub('-', '_')}")
+    I18n.t :this_file_language, :locale => locale
+    # 
+    # t("locale.#{locale.to_s.sub('-', '_')}")
   end
 
   # inspired by: https://github.com/greendog/spree_locales_dropdown
