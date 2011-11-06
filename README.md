@@ -1,11 +1,18 @@
-Spree Change Locale
-=================
+##Spree Change Locale
 
 Easy locale change in Spree.
 
+##Install
 
-Example
-=======
+Add the following to your Gemfile
+
+    gem 'spree_change_locale'
+
+Run:
+
+    bundle install
+
+##Example
 
 Adds a locale controller and route so then any path can be prepended with the locale.
 
@@ -19,15 +26,14 @@ Examples:
 
 Look at [examples/_language_bar.html.erb](blob/master/examples/_language_bar.html.erb) for a simple use in views.
 
-By default the extension will look at config/locales for enabled locales. If none found, it will fall to *I18n.locale*.
+By default the extension will look at config/locales for enabled locales. If none found, it will fall to *I18n.default_locale*.
 You can setup *Spree::Config.get(:enabled_locales)* with an array of available locales to force a list of enabled locales.
 
-<!-- Testing
--------
+<!-- ## Testing
 
 Be sure to add the rspec-rails gem to your Gemfile and then create a dummy test app for the specs to run against.
 
     $ bundle exec rake test app
     $ bundle exec rspec spec -->
 
-Copyright (c) 2011 [name of extension creator], released under the New BSD License
+Copyright (c) 2011 humancopy.net, released under the New BSD License
