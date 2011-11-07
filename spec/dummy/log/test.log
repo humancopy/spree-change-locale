@@ -1408,3 +1408,14 @@ Completed 302 Found in 2ms
   Parameters: {"locale"=>"ru"}
 Redirected to http://test.host/
 Completed 302 Found in 1ms
+  [1m[36mMailMethod Load (0.1ms)[0m  [1mSELECT "mail_methods".* FROM "mail_methods" WHERE "mail_methods"."environment" = 'test' LIMIT 1[0m
+  [1m[35mProperty Load (0.1ms)[0m  SELECT "properties".* FROM "properties" WHERE "properties"."name" = 'brand' LIMIT 1
+  [1m[36mAppConfiguration Load (0.3ms)[0m  [1mSELECT "configurations".* FROM "configurations" WHERE "configurations"."type" IN ('AppConfiguration') AND "configurations"."name" = 'Default configuration' LIMIT 1[0m
+  Processing by LocaleController#set as HTML
+  Parameters: {"locale"=>"es"}
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  Processing by LocaleController#set as HTML
+  Parameters: {"locale"=>"ru"}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
