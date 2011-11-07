@@ -6,6 +6,9 @@ Easy locale change in Spree.
 
 Add the following to your Gemfile
 
+    gem 'spree_change_locale'
+
+Or if you want to use edge:
     gem 'spree_change_locale', :git => 'git://github.com/humancopy/spree-change-locale.git'
 
 Run:
