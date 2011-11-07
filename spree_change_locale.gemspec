@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_change_locale'
-  s.version     = '0.4'
+  s.version     = '0.5'
   s.summary     = 'Easy locale change for Spree'
   s.description = 'Easy locale change for Spree'
   s.required_ruby_version = '>= 1.8.7'
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '>= 0.70.0'
-  # s.add_dependency 'http_accept_language', '~> 1.0'
+  s.add_dependency 'http_accept_language', '~> 1.0'
   s.add_development_dependency 'rspec-rails'
 end
 

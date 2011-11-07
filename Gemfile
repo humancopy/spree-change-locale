@@ -20,3 +20,5 @@ else
 end
 
 gemspec
+
+gem 'http_accept_language', '~> 1.0'

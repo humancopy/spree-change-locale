@@ -17,6 +17,8 @@ module SpreeChangeLocale
       Dir.glob(File.join(File.dirname(__FILE__), "../../app/overrides/*.rb")).each do |c|
         Rails.application.config.cache_classes ? require(c) : load(c)
       end
+
+      I18n.send :extend, I18nExtension
     end
 
     config.to_prepare &method(:activate).to_proc
