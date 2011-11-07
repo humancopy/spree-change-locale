@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_change_locale'
-  s.version     = '0.3.1'
+  s.version     = '0.4'
   s.summary     = 'Easy locale change for Spree'
   s.description = 'Easy locale change for Spree'
   s.required_ruby_version = '>= 1.8.7'
@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.homepage          = 'https://github.com/humancopy/spree-change-locale'
   # s.rubyforge_project = 'actionmailer'
 
-  #s.files         = `git ls-files`.split("\n")
-  #s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 

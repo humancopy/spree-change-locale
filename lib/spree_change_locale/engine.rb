@@ -10,23 +10,12 @@ module SpreeChangeLocale
     end
 
     def self.activate
-      Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")) do |c|
+      Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")).each do |c|
         Rails.application.config.cache_classes ? require(c) : load(c)
       end
 
-      Dir.glob(File.join(File.dirname(__FILE__), "../../app/overrides/*.rb")) do |c|
+      Dir.glob(File.join(File.dirname(__FILE__), "../../app/overrides/*.rb")).each do |c|
         Rails.application.config.cache_classes ? require(c) : load(c)
-      end
-
-      # add locale helper to Spree::BaseController
-      Spree::BaseController.class_eval do
-        helper :locale
-        before_filter :set_locale, :if => proc { !session[:locale] }
-
-        protected
-        def set_locale
-          session[:locale] = I18n.locale = (request.preferred_language_from(enabled_locales) || request.compatible_language_from(enabled_locales) || I18n.default_locale).intern
-        end
       end
     end
 
