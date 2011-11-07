@@ -1,5 +1,7 @@
 ##Spree Change Locale
 
+[![Build Status](https://secure.travis-ci.org/humancopy/spree-change-locale.png)](http://travis-ci.org/humancopy/spree-change-locale)
+
 Easy locale change in Spree.
 
 ##Install
