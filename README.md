@@ -21,7 +21,7 @@ Run:
 
 Adds a locale controller and route so then any path can be prepended with the locale.
 
-The extension saves the locale in *session[:locale]* and redirects back to the requested page, omitting the locale from the path.
+The extension saves the locale in *session[:locale]* and redirects the user back to the requested page, omitting the locale from the path.
 
 Examples:
 
@@ -31,15 +31,14 @@ Examples:
 
 Look at [examples/_language_bar.html.erb](https://github.com/humancopy/spree-change-locale/blob/master/examples/_language_bar.html.erb) for a simple use in views.
 
-By default the extension will look at config/locales for enabled locales. If none found, it will fall to *I18n.available_locales* and then to single *I18n.default_locale*.
+By default the extension will look at config/locales for enabled locales. If none found, it will try to look at *I18n.available_locales*. If still no array of enabled locales can be constructed, it will use a single locale as defined by *I18n.default_locale*.
 
-You can setup *Spree::Config[:enabled_locales]* with an array of available locales to force a list of enabled locales. (e.g. ```Spree::Config.set(:enabled_locales, ['en','es','it'])```)
+You can define *Spree::Config[:enabled_locales]* with an array of enabled locales to force. (e.g. ```Spree::Config.set(:enabled_locales, ['en','es','it'])```)
 
-<!-- ## Testing
+## Testing
 
 Be sure to add the rspec-rails gem to your Gemfile and then create a dummy test app for the specs to run against.
 
-    $ bundle exec rake test app
-    $ bundle exec rspec spec -->
+    $ bundle exec rspec spec
 
 Copyright (c) 2011 humancopy.net, released under the New BSD License
