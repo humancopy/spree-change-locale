@@ -1,0 +1,5 @@
+<ul id="locale_bar">
+<% enabled_locales.each do |locale| %>
+  <%= content_tag :li, link_to_locale(locale), :class => current_locale?(locale) ? 'selected' : nil %>
+<% end %>
+</ul>
