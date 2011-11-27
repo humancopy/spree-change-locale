@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 describe LocaleController do
-  # it "should use Spree::BaseController" do
-  #   controller.should be_an_instance_of(Spree::BaseController)
-  # end
-
   it "should redirect to index with session[:locale] set to :es" do
     session[:locale].should be_nil
     get 'set', :locale => 'es'
@@ -19,8 +15,13 @@ describe LocaleController do
     response.should redirect_to(root_path)
   end
   
-  it "should give url for Spanish" do
+  it "should give root url for Spanish" do
     { :get => "/es" }.should route_to(:controller => "locale", :action => "set", :locale => "es")
+  end
+  it "should give cart url for Spanish" do
+    { :get => "/es/cart" }.should route_to(:controller => "locale", :action => "set", :locale => "es", :return_path => "cart")
+  end
+  it "should not give root url for Russian" do
     { :get => "/ru" }.should_not route_to(:controller => "locale", :action => "set", :locale => "es")
   end
 end
